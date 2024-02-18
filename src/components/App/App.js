@@ -6,7 +6,9 @@ function App() {
     <div>
       <header className='header'>
         <div className='header__logo'>
-          <div>Logo</div>
+          </div>
+          <div>
+            <img src='./images/logo.svg' alt='logo' />
           <div>Date</div>
         </div>
   <div></div>
@@ -15,7 +17,9 @@ function App() {
     <button type="text" >Add New Clothes</button>
     </div>
     <div>Name</div>
-    <div>Avatar Logo</div>
+    <div>
+    <img src='./images/logo.svg' alt='logo' />
+    </div>
     </div>
       </header>
     </div>
