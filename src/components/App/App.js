@@ -7,6 +7,14 @@ function App() {
   return (
     <div>
       <Header />
+      <main>
+        <section id="weather">
+          weather
+        </section>
+        <section id="card section">
+          card section
+        </section>
+      </main>
     </div>
   );
 }
