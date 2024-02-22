@@ -8,8 +8,9 @@ function App() {
     <div>
       <Header />
       <main>
-        <section id="weather">
-          weather
+        <section className="weather" id="weather">
+        <div className="weather_info">75F</div>
+        <img src="/images/day/sunny.svg" className="weather_image"></img>
         </section>
         <section id="card section">
           card section
