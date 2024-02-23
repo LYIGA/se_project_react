@@ -6,12 +6,16 @@ function Header() {
   return (
     <div>
       <header className='header'>
-        <div className='header__logo'></div>
-        <div>
-          <img src={logo} alt='logo' />
+        {/* <div className='header__logo'></div> */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+          }}>
+          <img style={{ marginRight: "24px" }} src={logo} alt='logo' />
           <div>Date</div>
         </div>
-        <div></div>
+        {/* <div></div> */}
         <div className='header__avatar-logo'>
           <div>
             <button type='text'>Add New Clothes</button>

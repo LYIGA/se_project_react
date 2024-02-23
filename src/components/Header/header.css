@@ -1,16 +1,18 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 40px;
+  margin: 32px 40px 28px;
 }
 
 .header__logo {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .header__avatar-logo {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
