@@ -10,7 +10,7 @@ function App() {
     <div>
       <Header />
       <main>
-        <WeatherCard/>
+        <WeatherCard day={false} type='moon'/>
         {/* <section className='weather' id='weather'>
           <div className='weather_info'>75F</div>
           <img src={partlyCloudy} className='weather_image'></img>
