@@ -2,7 +2,7 @@ import avatar from "../../images/avatar.png";
 import logo from "../../images/logo.svg";
 import "./App.css";
 import Header from "../Header/header.js";
-import partlyCloudy from "../../images/partlyCloudy.svg";
+import partlyCloudy from "../../images/day/sunny.svg";
 import WeatherCard from "../../WeatherCard/weatherCard";
 
 function App() {
