@@ -6,7 +6,7 @@ const weatherOptions = [
   { url: require("../images/day/snow.svg"), day: true, type: "snow" },
   { url: require("../images/day/fog.svg"), day: true, type: "fog" },
   { url: require("../images/night/moon.svg"), day: false, type: "moon" },
-  { url: require("../images/night/cloud.svg"), day: false, type: "cloud" },
+  { url: require("../images/night/cloudy.svg"), day: false, type: "cloudy" },
   { url: require("../images/night/rain.svg"), day: false, type: "rain" },
   { url: require("../images/night/storm.svg"), day: false, type: "storm" },
   { url: require("../images/night/dew.svg"), day: true, type: "dew" },

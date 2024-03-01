@@ -10,7 +10,7 @@ function App() {
     <div>
       <Header />
       <main>
-        <WeatherCard day={true} type='sunny' />
+        <WeatherCard day={true} type='cloudy' />
         {/* <WeatherCard day={true} type='cloudy' />
         <WeatherCard day={true} type='rain' />
         <WeatherCard day={true} type='storm' />
