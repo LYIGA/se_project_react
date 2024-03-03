@@ -58,7 +58,14 @@ function App() {
 
         <section id='card section'>{defaultClothingItems.map(x=>{
           console.log(x)
-          return(<div> x.name</div>)
+          return (
+            <div>
+              <div>
+                <img src= {x.link} />
+              </div>
+              <div>{x.name}</div>
+            </div>
+          );
         })}
           </section>
       </main>
