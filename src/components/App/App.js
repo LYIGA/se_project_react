@@ -49,33 +49,19 @@ function App() {
   return (
     <div>
       <Header />
-      <main>
+      <main className="main">
         <WeatherCard day={true} type='cloudy' />
-        {/* <WeatherCard day={true} type='cloudy' />
-        <WeatherCard day={true} type='rain' />
-        <WeatherCard day={true} type='storm' />
-        <WeatherCard day={true} type='fog' />
-        <WeatherCard day={true} type='snow' /> */}
-
         <section className="card_section" id='card section'>
-          {defaultClothingItems.map(x=>{
-          return (
-            <itemCard x={x}/>
-          );
+          Today is 75 / You may want to wear:
+          <div className="card_item">
+          {defaultClothingItems.map((item) =>{
+            <itemCard item={item} />
         })}
+        </div>
           </section>
       </main>
     </div>
   );
-
-  // const itemCard = ({x}) => {
-  //   return <div>
-  //     <div>
-  //       <img src={x.link} className="card_image" />
-  //     </div>
-  //     <div className="card_name">{x.name}</div>
-  //   </div>;
-  // }
 }
 
 export default App;
