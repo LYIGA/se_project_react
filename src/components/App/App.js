@@ -56,7 +56,11 @@ function App() {
         <WeatherCard day={true} type='fog' />
         <WeatherCard day={true} type='snow' /> */}
 
-        <section id='card section'>card section</section>
+        <section id='card section'>{defaultClothingItems.map(x=>{
+          console.log(x)
+          return(<div> x.name</div>)
+        })}
+          </section>
       </main>
     </div>
   );
