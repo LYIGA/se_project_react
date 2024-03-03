@@ -4,6 +4,7 @@ import "./App.css";
 import Header from "../Header/header.js";
 // import day from "../../images/day/suuny.svg";
 import WeatherCard from "../../WeatherCard/weatherCard";
+import ItemCard from "../../ItemCard/itemCard";
 
 const defaultClothingItems = [
   {
@@ -56,21 +57,25 @@ function App() {
         <WeatherCard day={true} type='fog' />
         <WeatherCard day={true} type='snow' /> */}
 
-        <section id='card section'>{defaultClothingItems.map(x=>{
-          console.log(x)
+        <section className="card_section" id='card section'>
+          {defaultClothingItems.map(x=>{
           return (
-            <div>
-              <div>
-                <img src= {x.link} />
-              </div>
-              <div>{x.name}</div>
-            </div>
+            <itemCard x={x}/>
           );
         })}
           </section>
       </main>
     </div>
   );
+
+  // const itemCard = ({x}) => {
+  //   return <div>
+  //     <div>
+  //       <img src={x.link} className="card_image" />
+  //     </div>
+  //     <div className="card_name">{x.name}</div>
+  //   </div>;
+  // }
 }
 
 export default App;
