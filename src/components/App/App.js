@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "../Header/header.js";
 // import day from "../../images/day/suuny.svg";
 import WeatherCard from "../../WeatherCard/weatherCard";
-import ItemCard from "../../ItemCard/itemCard";
+import ItemCard from "../ItemCard/ItemCard";
 
 const defaultClothingItems = [
   {
@@ -42,24 +42,24 @@ const defaultClothingItems = [
     name: "Winter coat",
     weather: "cold",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4",
-  }
-]
+  },
+];
 
 function App() {
-  const weatherTemp = "756890"
+  const weatherTemp = "756890";
   return (
     <div>
       <Header />
-      <main className="main">
-        <WeatherCard day={true} type='cloudy' weatherTemp={weatherTemp}/>
-        <section className="card_section" id='card section'>
+      <main className='main'>
+        <WeatherCard day={true} type='cloudy' weatherTemp={weatherTemp} />
+        <section className='card_section' id='card section'>
           Today is {weatherTemp} / You may want to wear:
-          <div className="card_item">
-          {defaultClothingItems.map((item) =>{
-            <itemCard item={item} />
-        })}
-        </div>
-          </section>
+          <div className='card_items'>
+            {defaultClothingItems.map((item, index) => (
+              <ItemCard item={item} key={index} />
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   );
