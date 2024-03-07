@@ -51,7 +51,7 @@ function App() {
     <div>
       <Header />
       <main className="main">
-        <WeatherCard day={true} type="cloudy" weatherTemp={weatherTemp} />
+        <WeatherCard day={false} type="storm" weatherTemp={weatherTemp} />
         <section className="card_section" id="card section">
           Today is {weatherTemp} / You may want to wear:
           <div className="card_items">
