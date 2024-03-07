@@ -46,7 +46,7 @@ const defaultClothingItems = [
 ];
 
 function App() {
-  const weatherTemp = "756890";
+  const weatherTemp = "65F";
   return (
     <div>
       <Header />
