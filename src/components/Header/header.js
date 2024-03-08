@@ -3,6 +3,11 @@ import logo from "../../images/logo.svg";
 import "./header.css";
 
 function Header() {
+  const currentDate = new Date().toLocaleString("default", {
+    month: "long",
+    day: "numeric",
+  });
+
   return (
     <div>
       <header className='header'>
@@ -13,7 +18,7 @@ function Header() {
             alignItems: "center",
           }}>
           <img style={{ marginRight: "24px" }} src={logo} alt='logo' />
-          <div>Date</div>
+          <div>{currentDate}</div>
         </div>
         {/* <div></div> */}
         <div className='header__avatar-logo'>
