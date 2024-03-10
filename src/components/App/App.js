@@ -5,7 +5,7 @@ import Main from "../Main/Main";
 import Footer from "../Footer/footer";
 
 function App() {
-  const weatherTemp = "65°F";
+  const weatherTemp = "75°F";
   return (
     <div>
       <Header />
