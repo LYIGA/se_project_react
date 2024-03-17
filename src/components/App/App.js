@@ -49,7 +49,14 @@ function App() {
             </div> 
       </ModalWithForm>
       )}
-    </div>
+      <div className={`modal`}>
+            <div className="modal__content">
+              <img/>
+              <div>Text for the Item name</div>
+              <div>Weather type</div>
+              </div> 
+      </div>
+  </div>
   );
 }
 
