@@ -13,14 +13,11 @@ const weatherType =useMemo(() => {
       return 'cold';
     }
   },[weatherTemp]);
- 
-  console.log(weatherType)
 
   const filteredCards = defaultClothingItems.filter((item) => {
-    console.log(item)
     return item.weather.toLowerCase() === weatherType
-  })
-  console.log(filteredCards)
+  });
+  
 
     return <main className='main'>
       <WeatherCard day={false} type='storm' weatherTemp={weatherTemp}/>
