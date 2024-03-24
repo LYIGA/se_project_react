@@ -23,4 +23,12 @@
     position: absolute;
     top: 22px;
     right: 30px;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../images/close1.svg);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
