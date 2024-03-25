@@ -48,7 +48,7 @@ function App() {
           </label> 
           <label className="modal__label">
           Image
-          <input className="modal__input" placeholder="Image URL" type="url" name="link" minLength="1" maxLength="30" />
+          <input className="modal__input" placeholder="Image URL" type="text" name="link" minLength="1" maxLength="30" />
           </label>
           <p className="modal__weather-type">Select the weather type:</p>
           <div className="modal__radio">
