@@ -1,5 +1,6 @@
 import avatar from "../../images/avatar.png";
 import logo from "../../images/logo.svg";
+import ToggleSwitch from "../../ToggleSwitch/ToggleSwitch";
 import "./header.css";
 
 function Header({onCreateModal}) {
@@ -22,6 +23,7 @@ function Header({onCreateModal}) {
         </div>
         {/* <div></div> */}
         <div className='header__avatar-logo'>
+          <ToggleSwitch/>
           <div>
             <button type='text' onClick={onCreateModal}>Add New Clothes</button>
           </div>
