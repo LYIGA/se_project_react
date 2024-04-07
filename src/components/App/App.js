@@ -7,12 +7,14 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { useEffect, useState } from "react";
 import ItemModal from "../../ItemModal/ItemModal";
 import { getForcastWeather, parseWeatherData } from "../util/WeatherApi";
+import { currentTemperatureUnitContext} from "../contexts/currentTemperatureUnitContext"
 
 function App() {
   const weatherTemp = "30";
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [temp, setTemp] = useState(0);
+  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState('F');
 
   const handleCreateModal = () => {
     setActiveModal("create");
@@ -27,6 +29,10 @@ function App() {
     setSelectedCard(card);
   };
 
+  const handleToggleSwitchChange = () => {
+    if (currentTemperatureUnit === 'C') setCurrentTemperatureUnit('F')
+    if (currentTemperatureUnit === 'F') setCurrentTemperatureUnit('C')
+  }
   useEffect(() => {
     getForcastWeather().then((data) => {
       console.log(data);
@@ -37,6 +43,7 @@ function App() {
 
   return (
     <div>
+      <currentTemperatureUnitContext.provider value={{currentTemperatureUnit, handleToggleSwitchChange}}>
       <Header onCreateModal={handleCreateModal} />
       <Main weatherTemp={temp} onselectCard={handleSelectedCard} />
       <Footer />
@@ -83,6 +90,7 @@ function App() {
       {activeModal === "preview" && (
         <ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
       )}
+      </currentTemperatureUnitContext.provider>
     </div>
   );
 }
