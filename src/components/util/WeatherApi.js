@@ -22,5 +22,9 @@ export const getForcastWeather =() => {
 export const parseWeatherData = (data) => {
     const main = data.main;
     const temperature = main && main.temp;
-    return Math.ceil(temperature);
+    const weather = {temperature: {F: math.round(temperature), C: math.round((temperature-32) * 5/9)}}
+    return weather;
 };
+
+// weather.temperature.F =`${math.round(data.main.temp)}°F`;
+// weather.temperature.C =`${math.round((data.main.temp-32) * 5/9)}°C`;
