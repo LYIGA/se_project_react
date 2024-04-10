@@ -7,13 +7,13 @@ import {CurrentTemperatureUnitContext} from "../../contexts/CurrentTemperatureUn
 function Main({weatherTemp, onselectCard}) {
 
   const {currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext)
+  const weatherType =useMemo(() => {
   const temp = weatherTemp?.temperature?.[currentTemperatureUnit] || 999
-const weatherType =useMemo(() => {
     if (weatherTemp >= 86) {
       return 'hot';
-    } else if (weatherTemp >= 66 && weatherTemp <= 85) {
+    } else if (temp >= 66 && temp <= 85) {
       return 'warm';
-    } else if (weatherTemp <= 65) {
+    } else if (temp <= 65) {
       return 'cold';
     }
   },[weatherTemp]);
@@ -24,9 +24,9 @@ const weatherType =useMemo(() => {
   
 
     return <main className='main'>
-      <WeatherCard day={false} type='storm' weatherTemp={temp}/>
+      <WeatherCard day={false} type='storm' weatherTemp={weatherTemp}/>
       <section className='card_section' id='card section'>
-        Today is {temp} / You may want to wear:
+        Today is {weatherTemp} / You may want to wear:
         <div className='card_items'>
           {filteredCards.map((item, index) => (
             <ItemCard item={item} key={index} onselectCard={onselectCard}/>
