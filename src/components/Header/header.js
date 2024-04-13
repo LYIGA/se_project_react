@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import avatar from "../../images/avatar.png";
 import logo from "../../images/logo.svg";
 import ToggleSwitch from "../../ToggleSwitch/ToggleSwitch";
@@ -12,7 +13,6 @@ function Header({onCreateModal}) {
   return (
     <div>
       <header className='header'>
-        {/* <div className='header__logo'></div> */}
         <div
           style={{
             display: "flex",
@@ -21,15 +21,16 @@ function Header({onCreateModal}) {
           <img style={{ marginRight: "24px" }} src={logo} alt='logo' />
           <div>{currentDate}</div>
         </div>
-        {/* <div></div> */}
         <div className='header__avatar-logo'>
           <ToggleSwitch/>
           <div>
             <button type='text' onClick={onCreateModal}>Add New Clothes</button>
           </div>
-          <div>Name</div>
+          <Link to="/profile">Name</Link>
           <div>
+            <link to="/">
             <img src={avatar} alt='logo' />
+            </link>
           </div>
         </div>
       </header>
