@@ -39,7 +39,7 @@ function App() {
       const temperature = parseWeatherData(data);
       setTemp(temperature);
     });
-  });
+  },[]);
 
   return (
     <div>
