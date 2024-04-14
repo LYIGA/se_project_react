@@ -65,8 +65,6 @@ function App() {
 
       <Footer />
       {activeModal === "create" && <AddItemModal handleCloseModal={handleCloseModal} isOpen={activeModal=== "create"} onAddItem={onAddItem}/>}
-      {activeModal === "create" && (
-      )}
       {activeModal === "preview" && (
         <ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
       )}
