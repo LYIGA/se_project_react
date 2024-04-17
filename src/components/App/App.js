@@ -32,7 +32,7 @@ function App() {
   };
 
   const onAddItem = (values) => {
-    e.preventDefault ();
+    // e.preventDefault ();
     console.log(values)
   };
 
