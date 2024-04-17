@@ -8,7 +8,7 @@ const AddItemModal =(handleCloseModal, onAddItem, isOpen) => {
         SetName (e.target.value)
     }
 
-    const [ link,SetUrl] = useState("")
+    const [ url,SetUrl] = useState("")
     const handleUrlchange =(e) => {
         console.log(e.target.value)
         SetName (e.target.value)
@@ -16,7 +16,7 @@ const AddItemModal =(handleCloseModal, onAddItem, isOpen) => {
 
 const handleSubmit = (e) => {
     e.prevenDefault();
-    onAddItem({name, link})
+    onAddItem({name, url})
     };
 
 
