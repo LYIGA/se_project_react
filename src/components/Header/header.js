@@ -28,9 +28,9 @@ function Header({onCreateModal}) {
           </div>
           <Link to="/profile">Name</Link>
           <div>
-            <link to="/">
+            <Link to="/">
             <img src={avatar} alt='logo' />
-            </link>
+            </Link>
           </div>
         </div>
       </header>
