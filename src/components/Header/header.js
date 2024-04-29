@@ -26,7 +26,7 @@ function Header({onCreateModal}) {
           <div>
             <button type='text' onClick={onCreateModal}>Add New Clothes</button>
           </div>
-          <Link to="/profile">Name</Link>
+          <Link to="/profile">Smith Akin</Link>
           <div>
             <Link to="/">
             <img src={avatar} alt='logo' />

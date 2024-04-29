@@ -11,6 +11,7 @@ import { CurrentTemperatureUnitContext} from "../../contexts/CurrentTemperatureU
 import {Switch, Route} from 'react-router-dom';
 import AddItemModal from "../../AddItemModal/AddItemModal";
 import SideBar from "../SideBar/SideBar";
+import ClothesSection from "../ClothesSection/ClothesSection";
 
 function App() {
   const weatherTemp = "30";
@@ -61,6 +62,7 @@ function App() {
       </Route>
       <Route path="/profile">
       <SideBar/>
+      <ClothesSection/>
       </Route>
       </Switch>
 

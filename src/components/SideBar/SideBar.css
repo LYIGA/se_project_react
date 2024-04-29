@@ -1,3 +1,16 @@
-.Text {
+.Profile {
     display: flex;
+    margin-left: 40px;
+    max-width: 385px;
+    width: 100%;
+}
+
+.Profile__image {
+    width: 56px;
+    height: 56px;
+}
+
+.Profile__name {
+    margin: 16px 16px 16px;
+    font-weight: 700;
 }
