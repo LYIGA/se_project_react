@@ -38,6 +38,15 @@ function App() {
     console.log(values)
   };
 
+  const handleAddNewGarment = () => {
+    setActiveModal("add-garment");
+  };
+
+  const handleCardClick = (card) => {
+    setActiveModal("preview");
+    setSelectedCard(card);
+  };
+
   const handleToggleSwitchChange = () => {
     if (currentTemperatureUnit === 'C') setCurrentTemperatureUnit('F')
     if (currentTemperatureUnit === 'F') setCurrentTemperatureUnit('C')
@@ -61,13 +70,24 @@ function App() {
       <Main weatherTemp={temp} onselectCard={handleSelectedCard} />
       </Route>
       <Route path="/profile">
+        <div style={{ 'display': 'flex'}}>
       <SideBar/>
-      <ClothesSection/>
+      <ClothesSection handleCardClick={handleCardClick}/>
+      </div>
       </Route>
       </Switch>
 
       <Footer />
-      {activeModal === "create" && <AddItemModal handleCloseModal={handleCloseModal} isOpen={activeModal=== "create"} onAddItem={onAddItem}/>}
+
+      <AddItemModal
+          handleCloseClick={handleCloseClick}
+          isOpen={activeModal === "add-garment"}
+          onAddItem={onAddItem}
+        />
+      {activeModal === "create" && <AddItemModal
+       handleCloseModal={handleCloseModal}
+        isOpen={activeModal=== "create"} 
+        onAddItem={onAddItem}/>}
       {activeModal === "preview" && (
         <ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
       )}
