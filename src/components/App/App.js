@@ -12,6 +12,7 @@ import {Switch, Route} from 'react-router-dom';
 import AddItemModal from "../../AddItemModal/AddItemModal";
 import SideBar from "../SideBar/SideBar";
 import ClothesSection from "../ClothesSection/ClothesSection";
+import {defaultClothingItems } from "../util/constants.js"
 
 function App() {
   const weatherTemp = "30";
@@ -47,6 +48,10 @@ function App() {
     setSelectedCard(card);
   };
 
+  const handleCloseClick =() => {
+
+  }
+
   const handleToggleSwitchChange = () => {
     if (currentTemperatureUnit === 'C') setCurrentTemperatureUnit('F')
     if (currentTemperatureUnit === 'F') setCurrentTemperatureUnit('C')
@@ -72,7 +77,7 @@ function App() {
       <Route path="/profile">
         <div style={{ 'display': 'flex'}}>
       <SideBar/>
-      <ClothesSection handleCardClick={handleCardClick}/>
+      <ClothesSection handleCardClick={handleCardClick} clothingItems={defaultClothingItems}/>
       </div>
       </Route>
       </Switch>
