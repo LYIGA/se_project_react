@@ -26,8 +26,7 @@ const handleSubmit = (e) => {
          isOpen={isOpen}
           onSubmit={handleSubmit}
           >
-        <label>
-        className='modal__label'
+        <label className='modal__label'>
           Name
           <input
             className='modal__input'

@@ -77,7 +77,7 @@ function App() {
       <Route path="/profile">
         <div style={{ 'display': 'flex'}}>
       <SideBar/>
-      <ClothesSection handleCardClick={handleCardClick} clothingItems={defaultClothingItems}/>
+      <ClothesSection handleCardClick={handleCardClick} clothingItems={defaultClothingItems} handleAddNewGarment={handleAddNewGarment}/>
       </div>
       </Route>
       </Switch>
@@ -85,7 +85,7 @@ function App() {
       <Footer />
 
       <AddItemModal
-          handleCloseClick={handleCloseClick}
+        handleCloseModal={handleCloseModal}
           isOpen={activeModal === "add-garment"}
           onAddItem={onAddItem}
         />
