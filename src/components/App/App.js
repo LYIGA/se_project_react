@@ -10,7 +10,6 @@ import { getForcastWeather, parseWeatherData } from "../util/WeatherApi";
 import { CurrentTemperatureUnitContext} from "../../contexts/CurrentTemperatureUnitContext.js"
 import {Switch, Route} from 'react-router-dom';
 import AddItemModal from "../../AddItemModal/AddItemModal";
-import ItemModal from "./ItemModal";
 import SideBar from "../SideBar/SideBar";
 import ClothesSection from "../ClothesSection/ClothesSection";
 import {defaultClothingItems } from "../util/constants.js"
