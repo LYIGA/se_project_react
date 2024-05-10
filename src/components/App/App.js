@@ -9,7 +9,7 @@ import ItemModal from "../../ItemModal/ItemModal";
 import { getForcastWeather, parseWeatherData } from "../util/WeatherApi";
 import { CurrentTemperatureUnitContext} from "../../contexts/CurrentTemperatureUnitContext.js"
 import {Switch, Route} from 'react-router-dom';
-import AddItemModal from "../../AddItemModal/AddItemModal";
+import AddItemModal from "../AddItemModal/AddItemModal";
 import SideBar from "../SideBar/SideBar";
 import ClothesSection from "../ClothesSection/ClothesSection";
 import {defaultClothingItems } from "../util/constants.js"
