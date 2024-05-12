@@ -14,7 +14,7 @@ const ModalWithForm = ({
   console.log("ModalWithForm");
 
   return (
-    <div className={`modal modal_type_${name}`}>
+    <div className={`modal modal_type_${name} ${isOpen ? 'modal_opened' : ''}`}>
       <div className='modal__content'>
         <button className='modal__close1' type='button' onClick={onClose}>
           <img src={closeIcon}></img>
