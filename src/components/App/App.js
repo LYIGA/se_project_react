@@ -86,13 +86,13 @@ function App() {
 
       <AddItemModal
         handleCloseModal={handleCloseModal}
-          isOpen={activeModal === "add-garment"}
+          isOpen={activeModal === "create"}
           onAddItem={onAddItem}
         />
-      {activeModal === "create" && <AddItemModal
+      {/* {activeModal === "create" && <AddItemModal
        handleCloseModal={handleCloseModal}
         isOpen={activeModal=== "create"} 
-        onAddItem={onAddItem}/>}
+        onAddItem={onAddItem}/>} */}
       {activeModal === "preview" && (
         <ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
       )}
