@@ -4,7 +4,7 @@ import logo from "../../images/logo.svg";
 import ToggleSwitch from "../../ToggleSwitch/ToggleSwitch";
 import "./header.css";
 
-function Header({onCreateModal}) {
+function Header({ onCreateModal }) {
   const currentDate = new Date().toLocaleString("default", {
     month: "long",
     day: "numeric",
@@ -18,19 +18,21 @@ function Header({onCreateModal}) {
             display: "flex",
             alignItems: "center",
           }}>
-          <img style={{ marginRight: "24px" }} src={logo} alt='logo' />
+          <Link to='/'>
+            <img style={{ marginRight: "24px" }} src={logo} alt='logo' />
+          </Link>
           <div>{currentDate}</div>
         </div>
         <div className='header__avatar-logo'>
-          <ToggleSwitch/>
+          <ToggleSwitch />
           <div>
-            <button type='text' onClick={onCreateModal}>Add New Clothes</button>
+            <button type='text' onClick={onCreateModal}>
+              Add New Clothes
+            </button>
           </div>
-          <Link to="/profile">Smith Akin</Link>
+          <Link to='/profile'>Smith Akin</Link>
           <div>
-            <Link to="/">
             <img src={avatar} alt='logo' />
-            </Link>
           </div>
         </div>
       </header>
