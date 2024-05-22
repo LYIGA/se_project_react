@@ -15,7 +15,7 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
   };
 
   const handleSubmit = (e) => {
-    e.prevenDefault();
+    e.preventDefault();
     onAddItem({ name, url });
   };
 
