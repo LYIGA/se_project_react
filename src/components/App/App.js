@@ -12,7 +12,7 @@ import {Switch, Route} from 'react-router-dom';
 import AddItemModal from "../AddItemModal/AddItemModal";
 import SideBar from "../SideBar/SideBar";
 import ClothesSection from "../ClothesSection/ClothesSection";
-import {defaultClothingItems } from "../util/constants.js"
+import {defaultClothingItems } from "../utils/constants.js"
 
 function App() {
   const weatherTemp = "30";
