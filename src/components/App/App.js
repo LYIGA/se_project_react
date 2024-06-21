@@ -7,12 +7,12 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm.js";
 import { useEffect, useState } from "react";
 import ItemModal from "../../ItemModal/ItemModal";
 import { getForcastWeather, parseWeatherData } from "../utils/WeatherApi";
-import { CurrentTemperatureUnitContext} from "../../contexts/CurrentTemperatureUnitContext.js"
-import {Switch, Route} from 'react-router-dom';
+import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.js";
+import { Switch, Route } from "react-router-dom";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import SideBar from "../SideBar/SideBar";
 import ClothesSection from "../ClothesSection/ClothesSection";
-import {defaultClothingItems } from "../utils/constants.js"
+import { defaultClothingItems } from "../utils/constants.js";
 import { addItems, getItems } from "../utils/Api";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
   const [activeModal, setActiveModal] = useState("");
   const [selectedCard, setSelectedCard] = useState({});
   const [temp, setTemp] = useState(0);
-  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState('F');
+  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
 
   const handleCreateModal = () => {
     setActiveModal("create");
@@ -37,7 +37,11 @@ function App() {
 
   const onAddItem = (values) => {
     // e.preventDefault ();
-    console.log(values)
+    console.log(values);
+
+    addItems(values).then((item) => {
+      console.log(item);
+    });
   };
 
   const handleAddNewGarment = () => {
@@ -49,14 +53,12 @@ function App() {
     setSelectedCard(card);
   };
 
-  const handleCloseClick =() => {
-
-  }
+  const handleCloseClick = () => {};
 
   const handleToggleSwitchChange = () => {
-    if (currentTemperatureUnit === 'C') setCurrentTemperatureUnit('F')
-    if (currentTemperatureUnit === 'F') setCurrentTemperatureUnit('C')
-  }
+    if (currentTemperatureUnit === "C") setCurrentTemperatureUnit("F");
+    if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
+  };
   useEffect(() => {
     getForcastWeather().then((data) => {
       console.log(data);
@@ -64,47 +66,48 @@ function App() {
       setTemp(temperature);
     });
 
-   getItems().then((items) => {
-    console.log(items)
-   })
-  
-   addItems().then((item)) => {
-    console.log(item)
-   }
-  },[]);
+    getItems().then((items) => {
+      console.log(items);
+    });
+
+ 
+  }, []);
 
   return (
     <div>
       <CurrentTemperatureUnitContext.Provider
-       value={{currentTemperatureUnit, handleToggleSwitchChange}}>
-      <Header onCreateModal={handleCreateModal}  temp={temp}/>
-      <Switch>
-      <Route exact path="/">
-        
-      <Main weatherTemp={temp} onselectCard={handleSelectedCard} />
-      </Route>
-      <Route path="/profile">
-        <div style={{ 'display': 'flex'}}>
-      <SideBar/>
-      <ClothesSection handleCardClick={handleCardClick} clothingItems={defaultClothingItems} handleAddNewGarment={handleAddNewGarment}/>
-      </div>
-      </Route>
-      </Switch>
+        value={{ currentTemperatureUnit, handleToggleSwitchChange }}>
+        <Header onCreateModal={handleCreateModal} temp={temp} />
+        <Switch>
+          <Route exact path='/'>
+            <Main weatherTemp={temp} onselectCard={handleSelectedCard} />
+          </Route>
+          <Route path='/profile'>
+            <div style={{ display: "flex" }}>
+              <SideBar />
+              <ClothesSection
+                handleCardClick={handleCardClick}
+                clothingItems={defaultClothingItems}
+                handleAddNewGarment={handleAddNewGarment}
+              />
+            </div>
+          </Route>
+        </Switch>
 
-      <Footer />
+        <Footer />
 
-      <AddItemModal
-        handleCloseModal={handleCloseModal}
+        <AddItemModal
+          handleCloseModal={handleCloseModal}
           isOpen={activeModal === "create"}
           onAddItem={onAddItem}
         />
-      {/* {activeModal === "create" && <AddItemModal
+        {/* {activeModal === "create" && <AddItemModal
        handleCloseModal={handleCloseModal}
         isOpen={activeModal=== "create"} 
         onAddItem={onAddItem}/>} */}
-      {activeModal === "preview" && (
-        <ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
-      )}
+        {activeModal === "preview" && (
+          <ItemModal selectedCard={selectedCard} onClose={handleCloseModal} />
+        )}
       </CurrentTemperatureUnitContext.Provider>
     </div>
   );
