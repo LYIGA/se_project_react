@@ -39,7 +39,12 @@ function App() {
     // e.preventDefault ();
     console.log(values);
 
-    addItems(values).then((item) => {
+    addItems({
+      name: "Max was here",
+      weather: "hot",
+      imageUrl:
+        "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09",
+    }).then((item) => {
       console.log(item);
     });
   };
@@ -69,8 +74,6 @@ function App() {
     getItems().then((items) => {
       console.log(items);
     });
-
- 
   }, []);
 
   return (
