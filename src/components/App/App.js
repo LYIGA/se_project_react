@@ -6,14 +6,14 @@ import Footer from "../Footer/footer";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.js";
 import { useEffect, useState } from "react";
 import ItemModal from "../../ItemModal/ItemModal";
-import { getForcastWeather, parseWeatherData } from "../utils/WeatherApi";
+import { getForcastWeather, parseWeatherData } from "../../utils/WeatherApi";
 import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext.js";
 import { Switch, Route } from "react-router-dom";
 import AddItemModal from "../AddItemModal/AddItemModal";
 import SideBar from "../SideBar/SideBar";
 import ClothesSection from "../ClothesSection/ClothesSection";
-import { defaultClothingItems } from "../utils/constants.js";
-import { addItems, getItems } from "../utils/Api";
+import { defaultClothingItems } from "../../utils/constants.js";
+import { addItems, getItems } from "../../utils/Api";
 
 function App() {
   const weatherTemp = "30";
