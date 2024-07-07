@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import avatar from "../../images/avatar.png";
 import logo from "../../images/logo.svg";
-import ToggleSwitch from "../../ToggleSwitch/ToggleSwitch";
+import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import "./header.css";
 
 function Header({ onCreateModal }) {
