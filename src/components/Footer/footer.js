@@ -1,18 +1,12 @@
-import App from "../App/App"
+import "../Footer/footer.css";
 
-const Footer = () => {
-
-    console.log("footer")
-    return (
-        <footer className="footer">
-        <div>
-          Developed by Smith Akin
-        </div>
-        <div>
-          2024
-        </div>
-      </footer>
-    )
+function Footer() {
+  return (
+    <footer className="footer">
+      <p className="footer__author">Developed by AKIN SMITH</p>
+      <p className="footer__date">APRIL 2024</p>
+    </footer>
+  );
 }
 
 export default Footer;

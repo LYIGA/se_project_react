@@ -25,7 +25,7 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
       onClose={handleCloseModal}
       isOpen={isOpen}
       onSubmit={handleSubmit}>
-      <label className='modal__label'>
+      <label className='modal__label' htmlFor="name-input">
         Name
         <input
           className='modal__input'
@@ -36,6 +36,7 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
           maxLength='30'
           value={name}
           onChange={handleNamechange}
+          id="name-input"
         />
       </label>
       <label className='modal__label'>
