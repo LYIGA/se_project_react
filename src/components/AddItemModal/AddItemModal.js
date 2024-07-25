@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm.js";
 
 const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
-  const [name, SetName] = useState("");
+  const [name, setName] = useState("");
   const handleNamechange = (e) => {
     console.log(e.target.value);
     SetName(e.target.value);
@@ -65,6 +65,10 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
         <div>
           <input type='radio' id='cold' value='cold' />
           <label>Cold</label>
+        </div>
+        <div>
+          <input type='radio' id='add garment' value='add garment' />
+          <label>garment</label>
         </div>
       </div>
     </ModalWithForm>
