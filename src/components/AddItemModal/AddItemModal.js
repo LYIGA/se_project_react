@@ -66,10 +66,6 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
           <input type='radio' id='cold' value='cold' />
           <label>Cold</label>
         </div>
-        <div>
-          <input type='radio' id='add garment' value='add garment' />
-          <label>garment</label>
-        </div>
       </div>
     </ModalWithForm>
   );
