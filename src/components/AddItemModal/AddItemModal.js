@@ -13,7 +13,7 @@ const AddItemModal = ({ handleCloseModal, onAddItem, isOpen }) => {
     console.log(e.target.value);
     setUrl(e.target.value);
   };
-
+debugger;
   const handleSubmit = (e) => {
     e.preventDefault();
     onAddItem({ name, url });

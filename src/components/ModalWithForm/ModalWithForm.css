@@ -89,3 +89,17 @@
   border: none;
   background-color: transparent;
 }
+
+.modal__form_submit-button {
+  font-family: CabinetGrotesk-Regular;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 20px;
+  width: 124px;
+  height: 36px;
+  border-radius: 4px;
+  margin-top: 32px;
+  margin-bottom: 0;
+  background-color: #0000004d;
+}
