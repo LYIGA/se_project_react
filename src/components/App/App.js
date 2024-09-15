@@ -69,11 +69,11 @@ function App() {
       console.log(data);
       const temperature = parseWeatherData(data);
       setTemp(temperature);
-    }).catch(error => console.log(error));
+    }).catch(error => console.error(error));
 
     getItems().then((items) => {
       console.log(items);
-    });
+    }).catch(error => console.error(error));
   }, []);
 
   return (
